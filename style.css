@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{font-family: 'Poppins', sans-serif;}
+body .bg-body-tertiary{background-color: #212121!important;}
+
+.search-container{width: 30%;position: relative;}
+.search-container .form-control{border-radius: 50px;}
+.search-container .btn{border-radius: 50px;position: absolute;right: 15px;background: #FFF;border: none;}
+.search-container .btn:hover{background: none}
+
+.my-card{position: relative;cursor: pointer;}
+.my-card .icon{width: 38px;height: 38px;background: #FFFFFF;border-radius: 50%;fill: #212121;display: flex;align-items: center;justify-content: center;}
+.my-card .sepetUrunSayisi{position: absolute;top: 0px;left: 0;width: 12px;line-height: 12px;border:1px solid #212121;text-align: center;background: #FFF;font-size: 10px;border-radius: 50%;}
+
+.categoryContainer{margin-top: 25px;}
+.categoryContainer .divLeftBlock{padding: 10px;border-radius: 10px;}
+.categoryContainer .divLeftBlock .category-title{line-height: 50px;font-size: 18px;padding: 0 5px;font-weight: 500;}
+.categoryContainer .divLeftBlock .list-group-item{line-height: 38px;margin-bottom: 10px;border-radius: 10px;cursor: pointer;border: 1px solid #ddd;box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);color: #212121;transition: all .5s ease-in-out;}
+.categoryContainer .divLeftBlock .list-group-item:hover{background: #212121;color: #FFFFFF;}
+.categoryContainer .divRightBlock{}
+
+.cart-item{float: left;padding: 0 10px;}
+.cart-item.hidden{display: none!important;}
+.cart-item .card{float: left;width: 100%;display: inline-block!important;}
+.cart-item .card .product-image{float:left;width:100%;display: block;position: relative;padding-bottom: 125%;}
+.cart-item .card .product-image img{max-width: 100%;max-height: 100%;height: auto;position: absolute;left: 0;right: 0;top: 0;bottom: 0;padding: 10px;margin: auto;border-radius: 0;transition: all 1s ease;-webkit-transition: all 1s ease;-moz-transition: all 1s ease;-o-transition: all 1s ease;}
+.cart-item .card .card-body{float: left;width: 100%;display: inline-block;}
+.cart-item .card .card-body .product-name{float: left;width: 100%;padding: 0;line-height: 20px;height: 60px;font-weight: 400;font-size: 16px;color: #000;margin-bottom: 15px;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;}
+.cart-item .card .card-body .product-price{float: left;width: 100%;padding: 0;line-height: 20px;font-weight: 400;font-size: 16px;color: #000;margin-bottom: 15px;}
+.cart-item .card .card-body .myCardIcon{float: left;width: 100%;font-size:14px;text-align: center;line-height: 40px;background: #ffffff;border-radius: 5px;color: #212121;cursor: pointer;border: 1px solid #212121;transition: all .5s ease-in-out;}
+.cart-item .card .card-body .myCardIcon:hover{background: #212121;color: #ffffff;}
+
+.CartProduct{display: block!important;width: 500px;background: #fff;float: left;border: 0;z-index: 9999;position: fixed;top: 0;right: -500px;bottom: 0;box-shadow: 0 0 6px #00000029;opacity: 0;visibility: hidden;-webkit-transition: all .4s linear;-moz-transition: all .4s linear;transition: all .4s linear;}
+.CartProduct.active{visibility: visible;opacity: 1;right: 0;}
+.CartProduct .SepetUst{float: left;width: 100%;display: flex;align-items: center;justify-content: space-between;background: #212121;height: 54px;padding: 0 20px;}
+.CartProduct .SepetUst .closeIcon{cursor: pointer;}
+.CartProduct .SepetUst .closeIcon svg{width: 20px;fill: #FFFFFF;}
+.CartProduct .SepetUst span{color: #FFFFFF;font-size: 16px;font-weight: 500;}
+.CartProduct .divustSepetteUrunYok{float: left;width: 100%;text-align: center;margin: 20px 0;font-size: 16px;}
+.CartProduct .mini-cart-list{float: left;width: 100%;text-align: center;font-size: 16px;padding: 0 20px;overflow: hidden;overflow-y: auto;height: 100%;}
+.CartProduct .mini-cart-list .mini-cart-box{float: left;width: 100%;text-align: center;font-size: 16px;margin: 20px 0 0 0;display: flex;gap: 10px}
+.CartProduct .mini-cart-list .mini-cart-img{float: left;width: 25%;}
+.CartProduct .mini-cart-list .mini-cart-img img{float: left;width: 100%;}
+.CartProduct .mini-cart-list .leftArea{float: left;width: 70%;}
+.CartProduct .mini-cart-list .removeIcon{float: left;width: 5%;height: 30px;}
+.CartProduct .mini-cart-list .removeIcon svg{width: 10px;cursor: pointer;}
+.CartProduct .mini-cart-list .mini-cart-name{float: left;width: 100%;text-align: left;font-size: 16px;line-height: 20px;margin-bottom: 15px}
+.CartProduct .mini-cart-list .mini-cart-price{float: left;width: 100%;text-align: left;font-size: 14px;line-height: 20px;}
+
+.cart-list.filter-active .cart-item{display: none;}
+.cart-list ul .cart-item.selected{}
+.cart-list.filter-active .cart-item.selected{display: block;}
+
+@media screen and (max-width: 767px){
+    .search-container{width: 60%;}
+
+    .CartProduct{width: 100%;}
+}
+
